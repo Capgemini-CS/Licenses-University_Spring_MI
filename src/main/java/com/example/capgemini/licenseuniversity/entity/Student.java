@@ -3,7 +3,6 @@ package com.example.capgemini.licenseuniversity.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @ToString
 @Getter
