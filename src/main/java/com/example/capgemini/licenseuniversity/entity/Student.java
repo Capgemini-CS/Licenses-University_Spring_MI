@@ -3,6 +3,7 @@ package com.example.capgemini.licenseuniversity.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @ToString
 @Getter
@@ -12,12 +13,14 @@ import javax.persistence.*;
 @Entity(name="students")
 public class Student {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_student;
     private String firstName;
     private String lastName;
+        @Column(unique = true, nullable = false, length = 13)
     private String cnp;
+        @Column(nullable = false, length = 2)
     private Integer age;
 
     @OneToOne(cascade = CascadeType.ALL)
