@@ -19,8 +19,7 @@ public class Profesor {
     private Integer idProfesor;
     private String firstName;
     private String lastName;
-        @Enumerated(value = EnumType.STRING)
-    private Subjects subject;
+    private String subject;
     private Integer old;
 
     @OneToMany(fetch = FetchType.LAZY)

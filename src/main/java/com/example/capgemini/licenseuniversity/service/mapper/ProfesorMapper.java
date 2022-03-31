@@ -19,7 +19,7 @@ public class ProfesorMapper {
     }
 
 
-    public static Profesor toProduct(ProfesorDTO profesorDTO){
+    public static Profesor toProfesor(ProfesorDTO profesorDTO){
         Profesor profesor = new Profesor();
 
         profesor.setIdProfesor(profesorDTO.getIdProfesor());

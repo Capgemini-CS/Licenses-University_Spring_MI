@@ -19,10 +19,10 @@ public class Student {
     private String lastName;
         @Column(unique = true, nullable = false, length = 13)
     private String cnp;
-        @Column(nullable = false, length = 2)
+        @Column(nullable = false)
     private Integer age;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "homework_id")
+    @JoinColumn(name = "name")
     private TemeLicenta teme_licenta;
 }
