@@ -12,10 +12,11 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name="professors")
 
-public class Profesor {
+public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name = "id_profesor")
     private Integer idProfesor;
     private String firstName;
     private String lastName;
@@ -23,6 +24,6 @@ public class Profesor {
     private Integer old;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "homework_id")
-    private List<TemeLicenta> licensesList;
+    @JoinColumn(name = "id_theme")
+    private List<LicensedTheme> licensesList;
 }

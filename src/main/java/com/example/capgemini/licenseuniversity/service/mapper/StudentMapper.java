@@ -8,11 +8,11 @@ public class StudentMapper {
     public static StudentDTO toStudentDTO (Student student){
         StudentDTO studentDTO = new StudentDTO();
 
-        studentDTO.setId_student(student.getId_student());
+        studentDTO.setIdStudent(student.getIdStudent());
         studentDTO.setFirstName(student.getFirstName());
         studentDTO.setLastName(student.getLastName());
         studentDTO.setAge(student.getAge());
-        studentDTO.setTeme_licenta(student.getTeme_licenta());
+        studentDTO.setLicensedTheme(student.getLicensedTheme());
 
         return studentDTO;
     }
@@ -21,12 +21,12 @@ public class StudentMapper {
     public static Student toStudent(StudentDTO studentDTO){
         Student student = new Student();
 
-        student.setId_student(studentDTO.getId_student());
+        student.setIdStudent(studentDTO.getIdStudent());
         student.setFirstName(studentDTO.getFirstName());
         student.setLastName(studentDTO.getLastName());
         student.setCnp(studentDTO.getCnp());
         student.setAge(studentDTO.getAge());
-        student.setTeme_licenta(studentDTO.getTeme_licenta());
+        student.setLicensedTheme(studentDTO.getLicensedTheme());
 
         return student;
     }

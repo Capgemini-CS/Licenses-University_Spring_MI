@@ -1,6 +1,6 @@
 package com.example.capgemini.licenseuniversity.entity.dto;
 
-import com.example.capgemini.licenseuniversity.entity.TemeLicenta;
+import com.example.capgemini.licenseuniversity.entity.LicensedTheme;
 import lombok.*;
 
 import java.util.List;
@@ -10,12 +10,12 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProfesorDTO {
+public class ProfessorDTO {
 
     private Integer idProfesor;
     private String firstName;
     private String lastName;
     private String subject;
     private Integer old;
-    private List<TemeLicenta> licensesList;
+    private List<LicensedTheme> licensesList;
 }

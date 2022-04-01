@@ -14,7 +14,8 @@ public class Student {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_student;
+        @Column(name = "id_Student")
+    private Integer idStudent;
     private String firstName;
     private String lastName;
         @Column(unique = true, nullable = false, length = 13)
@@ -23,6 +24,6 @@ public class Student {
     private Integer age;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "name")
-    private TemeLicenta teme_licenta;
+    @JoinColumn(name = "license_theme_name")
+    private LicensedTheme licensedTheme;
 }

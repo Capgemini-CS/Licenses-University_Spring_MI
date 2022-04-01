@@ -1,6 +1,6 @@
 package com.example.capgemini.licenseuniversity.entity.dto;
 
-import com.example.capgemini.licenseuniversity.entity.Profesor;
+import com.example.capgemini.licenseuniversity.entity.Professor;
 import com.example.capgemini.licenseuniversity.entity.Student;
 import lombok.*;
 
@@ -9,11 +9,11 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TemelicentaDTO {
-    private Integer homework_id;
-    private String name;
-    private Integer noPages;
+public class LicensedThemeDTO {
+    private Integer idLicensedTheme;
+    private String licenseThemeName;
+    private Integer numberOfPages;
     private boolean hasApplication;
     private Student student;
-    private Profesor profesor;
+    private Professor profesor;
 }

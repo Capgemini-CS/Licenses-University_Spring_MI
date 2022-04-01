@@ -10,18 +10,20 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name="temelicenta")
-public class TemeLicenta {
+public class LicensedTheme {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer homework_id;
-    private String name;
-    private Integer noPages;
+        @Column(name = "id_theme")
+    private Integer idLicensedTheme;
+        @Column(name = "license_theme_name")
+    private String licenseThemeName;
+    private Integer numberOfPages;
     private boolean hasApplication;
 
-    @OneToOne(mappedBy = "teme_licenta")
+    @OneToOne(mappedBy = "licensedTheme")
     private Student student;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Profesor profesor;
+    private Professor profesor;
 }

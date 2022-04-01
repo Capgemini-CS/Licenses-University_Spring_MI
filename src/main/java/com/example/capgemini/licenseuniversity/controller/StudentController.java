@@ -20,12 +20,12 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "/")
     public ResponseEntity<List<StudentDTO>> getAllStudents(){
         return new ResponseEntity<>(studentService.getAllStudents(), HttpStatus.OK);
     }
 
-    @PostMapping(value = "/post")
+    @PostMapping(value = "/")
     public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO){
         return new ResponseEntity<>(studentService.addStudent(studentDTO),HttpStatus.CREATED);
     }

@@ -1,6 +1,6 @@
 package com.example.capgemini.licenseuniversity.entity.dto;
 
-import com.example.capgemini.licenseuniversity.entity.TemeLicenta;
+import com.example.capgemini.licenseuniversity.entity.LicensedTheme;
 import lombok.*;
 
 @ToString
@@ -9,10 +9,10 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StudentDTO {
-    private Integer id_student;
+    private Integer idStudent;
     private String firstName;
     private String lastName;
     private String cnp;
     private Integer age;
-    private TemeLicenta teme_licenta;
+    private LicensedTheme licensedTheme;
 }
